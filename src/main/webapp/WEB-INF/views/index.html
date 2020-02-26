@@ -24,9 +24,25 @@
 </div>
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Прайс</h1>
+    <h1 class="display-3">Прайс</h1>
     <p class="lead">Список доступных к покупке автомобилей с фотографией и описанием.</p>
     <p th:if="${listCar.empty}">Приносим свои извинения. В данный момент доступных автомобилей нет...</p>
+</div>
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Сортировка</h1>
+    <table>
+        <tr>
+            <td><form  method="get" th:action="@{/SortById}">
+                <button type="submit" class="btn btn-lg btn-block btn-primary">Сортировать по номеру</button>
+            </form></td>
+            <td><form  method="get" th:action="@{/SortByModel}">
+                <button type="submit" class="btn btn-lg btn-block btn-primary">Сортировать по модели</button>
+            </form></td>
+            <td><form  method="get" th:action="@{/SortByPrice}">
+                <button type="submit" class="btn btn-lg btn-block btn-primary">Сортировать по цене</button>
+            </form></td>
+        </tr>
+    </table>
 </div>
 
 <div class="container">

@@ -17,5 +17,7 @@ public class Car {
     private String sImgPath;
     private String sInfo;
     //--Задаём способ сортировки
-    public static final Comparator<Car> COMPARE_BY_ID = Comparator.comparingInt(Car::getId);
+    public static final Comparator<Car> COMPARE_BY_ID = Comparator.comparingInt(Car::getId); //--Прямое сравнивание Integer
+    public static final Comparator<Car> COMPARE_BY_PRICE = (o1, o2) -> o1.getIPrice() - o2.getIPrice(); //--Через лямбды (чтобы помнить, что так тоже можно)
+    public static final Comparator<Car> COMPARE_BY_MODEL = Comparator.comparing(obj -> obj.getSModel()); //--Появилось вроде в Java 8
 }

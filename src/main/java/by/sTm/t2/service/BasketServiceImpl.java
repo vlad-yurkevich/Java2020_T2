@@ -8,7 +8,7 @@ import java.util.List;
 
 @Service
 public class BasketServiceImpl implements BasketService {
-    private final List<Car> listBasket = new ArrayList<>();
+    private List<Car> listBasket = new ArrayList<>();
 
     @Override
     public List<Car> getList() {
@@ -34,4 +34,5 @@ public class BasketServiceImpl implements BasketService {
                 .findFirst()
                 .orElseThrow(RuntimeException::new); //--В 11 Джаве можно без аргумента
     }
+
 }

@@ -2,7 +2,6 @@ package by.sTm.t2.service;
 
 import by.sTm.t2.domain.Car;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +9,7 @@ import javax.annotation.PostConstruct;
 
 @Service
 public class CarServiceImpl implements CarService{
-    private final List<Car> listCar = new ArrayList<>();
+    private List<Car> listCar = new ArrayList<>();
 
     @PostConstruct
     public void init(){
@@ -48,7 +47,7 @@ public class CarServiceImpl implements CarService{
 
     @Override
     public List<Car> getList() {
-        doSort(false);
+        //doSort(false);
         return this.listCar;
     }
 
@@ -72,9 +71,9 @@ public class CarServiceImpl implements CarService{
                 .orElseThrow(RuntimeException::new); //--В 11 Джаве можно без аргумента
     }
 
-    private void doSort(boolean reverse)
+    /*private void doSort(boolean reverse)
     {
         if (!reverse){ Collections.sort(listCar, Car.COMPARE_BY_ID); }
         else { Collections.sort(listCar, Collections.reverseOrder(Car.COMPARE_BY_ID)); }
-    }
+    }*/
 }
