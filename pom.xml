@@ -20,7 +20,7 @@
     <spring.version>6.0.0</spring.version>
     <jstl.version>1.2</jstl.version>
     <servlet.version>3.0.1</servlet.version>
-    <bootstrap.version>4.2.1</bootstrap.version>
+    <bootstrap.version>4.3.1</bootstrap.version>
   </properties>
 
   <dependencies>
